@@ -1,0 +1,379 @@
+
+		body.dark-mode {
+			background-color: #121212;
+			color: #e0e0e0;
+		}
+		body.dark-mode header,
+		body.dark-mode footer,
+		body.dark-mode nav,
+		body.dark-mode main,
+		body.dark-mode .widget,
+		body.dark-mode .statistics {
+			background-color: #1e1e1e;
+			color: #e0e0e0;
+		}
+		body.dark-mode .timeline-event::before {
+			background-color: #7a8a9e;
+		}
+		body.dark-mode .scroll-to-top {
+			background-color: #333;
+		}
+		body.dark-mode .banner {
+			filter: brightness(50%);
+		}
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .layout {
+            display: grid;
+            gap: 16px;
+            grid-template-rows: auto auto 1fr auto auto auto;
+            grid-template-columns: 1fr;
+            grid-template-areas: 'header' 'sidebar' 'main' 'widget' 'statistics' 'footer';
+            padding: 20px;
+        }
+        @media (min-width: 700px) {
+            .layout {
+                display: grid;
+                grid-template-rows: auto auto 350px auto;
+                grid-template-columns: 300px 50% auto;
+                grid-template-areas: 'header header header' 'sidebar main main' 'sidebar widget statistics' 'footer footer footer';
+            }
+        }
+        header {
+            grid-area: header;
+            background: #4a90e2;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+			align-items: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        header p {
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
+        footer {
+            grid-area: footer;
+            background: #4a90e2;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            grid-area: sidebar;
+            background: #2d4059;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        }
+        main {
+            grid-area: main;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .widget {
+            grid-area: widget;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* Скрываем все, что выходит за пределы блока */
+        }
+        .widget img {
+            max-width: 100%; /* Ограничиваем ширину изображения до ширины родительского блока */
+            height: auto; /* Сохраняем пропорции изображения */
+            display: block; /* Убираем пробелы снизу изображений */
+            margin-bottom: 10px; /* Добавляем отступ между изображениями */
+        }
+        .statistics {
+            grid-area: statistics;
+            background: #79a8a9;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline {
+            position: relative;
+            margin-top: 20px;
+            border-left: 3px solid #4a90e2;
+            padding-left: 20px;
+            overflow-y: auto; /* Добавляем вертикальную прокрутку */
+            overflow-x: hidden; /* Убираем горизонтальную прокрутку */
+            max-height: 800px;
+        }
+        .timeline-event {
+            position: relative;
+            margin-bottom: 20px;
+            padding-left: 20px;
+            cursor: pointer;
+        }
+        .timeline-event::before {
+            content: '';
+            position: absolute;
+            left: -12px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background-color: #4a90e2;
+            border-radius: 50%;
+        }
+        .timeline-date {
+            font-weight: bold;
+            color: #4a90e2;
+            margin-bottom: 5px;
+        }
+        .timeline-title {
+            font-size: 1em;
+        }
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #2d4059;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            z-index: 1000;
+        }
+        .scroll-to-top.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .footer-content h4 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        .footer-content p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+        .close-btn {
+            display: none;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .close-btn.show {
+            display: block;
+        }
+		/* Общие стили для темной темы */
+		body.dark-mode {
+			background-color: #121212; /* Тёмный фон */
+			color: #e0e0e0; /* Светлый текст */
+		}
+
+		/* Стили для различных элементов в темной теме */
+		body.dark-mode header {
+			background: #1f1f1f; /* Тёмный фон для заголовка */
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Более заметная тень */
+		}
+
+		body.dark-mode footer {
+			background: #1f1f1f; /* Тёмный фон для подвала */
+			box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3); /* Более заметная тень */
+		}
+
+		body.dark-mode nav {
+			background: #333333; /* Ещё более тёмный фон для боковой панели */
+			color: #fafbfc;
+		}
+
+		body.dark-mode main {
+			background: #1e1e1e; /* Тёмный фон для основного контента */
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Легкая тень */
+		}
+
+		body.dark-mode .widget,
+		body.dark-mode .statistics {
+			background: #2c2c2c; /* Тёмный фон для виджетов и статистики */
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Легкая тень */
+		}
+
+		/* Стили для кнопки "вернуться к верху" в тёмной теме */
+		body.dark-mode .scroll-to-top {
+			background-color: #444;
+		}
+
+		/* Стили для временной линии в тёмной теме */
+		body.dark-mode .timeline-event {
+			border-left: 3px solid #7a8a9e; /* Изменяем цвет линии в тёмной теме */
+		}
+
+		body.dark-mode .timeline-event::before {
+			background-color: #7a8a9e; /* Изменяем цвет точки в тёмной теме */
+		}
+
+		/* Баннер в тёмной теме */
+		body.dark-mode .banner {
+			filter: brightness(70%); /* Уменьшаем яркость изображения */
+		}
+
+		/* Фоновый градиент для тела страницы в тёмной теме */
+		body.dark-mode {
+			background: linear-gradient(135deg, #121212 0%, #1e1e1e 100%);
+		}
+
+		/* Переходы для изменения цвета при наведении */
+		body.dark-mode .theme-toggle-btn:hover {
+			background-color: #555;
+			/* transform: scale(1.1); */
+		}
+
+		/* Градиент для карточек и виджетов */
+		body.dark-mode .widget,
+		body.dark-mode .statistics {
+			background: linear-gradient(145deg, #2c2c2c 0%, #1e1e1e 100%);
+		}
+
+		/* Переходы для кнопок и интерактивных элементов */
+		body.dark-mode .scroll-to-top {
+			transition: background-color 0.3s ease, transform 0.3s ease;
+		}
+
+		/* Стили для кнопки смены темы */
+		.theme-toggle-btn {
+			position: relative;
+			left: 50%;
+			transform: translate(-50%, 0);
+			background: #4a90e2; /* Основной цвет кнопки */
+			color: white;
+			border: none;
+			border-radius: 50%;
+			width: 60px; /* Увеличиваем размер кнопки */
+			height: 60px; /* Увеличиваем размер кнопки */
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 24px;
+			cursor: pointer;
+			transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		}
+
+		.theme-toggle-btn:active {
+			background-color: #357abd;
+			box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+			transform: scale(1.5);
+		}
+
+		.theme-toggle-btn .fa {
+			position: absolute;
+			transition: opacity 0.3s ease;
+		}
+
+		#moonIcon {
+			opacity: 0;
+		}
+
+		body.dark-mode #moonIcon {
+			opacity: 1;
+		}
+
+		body.dark-mode #sunIcon {
+			opacity: 0;
+		}
+
+		/* Общие стили для светлой темы */
+		body {
+			font-family: 'Arial', sans-serif;
+			background-color: #f0f4f8; /* Светлый фон страницы */
+			color: #333; /* Темный текст для контраста */
+		}
+
+		/* Стили для заголовка */
+		header {
+			background: linear-gradient(135deg, #ffffff 0%, #e2eafc 100%); /* Градиентный фон */
+			color: #333;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+		}
+
+		/* Стили для подвала */
+		footer {
+			background: linear-gradient(135deg, #ffffff 0%, #e2eafc 100%); /* Градиентный фон */
+			color: #333;
+			box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+		}
+
+		/* Стили для боковой панели */
+		nav {
+			background: #ffffff; /* Чистый белый фон */
+			color: #333;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+		}
+
+		/* Стили для основного контента */
+		main {
+			background: #ffffff; /* Чистый белый фон */
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+		}
+
+		/* Стили для виджетов и статистики */
+		.widget,
+		.statistics {
+			background: #ffffff; /* Чистый белый фон */
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+		}
+
+		/* Стили для временной линии */
+		.timeline-event {
+			border-left: 3px solid #4a90e2; /* Яркая линия */
+		}
+
+		.timeline-event::before {
+			background-color: #4a90e2; /* Яркая точка */
+		}
+
+		/* Стили для кнопки "вернуться к верху" */
+		.scroll-to-top {
+			background-color: #4a90e2; /* Основной цвет */
+		}
+        .statistics-banner {
+            width: 100%;
+            height: 100%;
+        }
+
+        .banner {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            filter: brightness(100%); /* Яркость изображения по умолчанию */
+        }

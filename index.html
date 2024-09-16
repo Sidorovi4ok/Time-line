@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Отечественная война 1812 года</title>
+</head>
+<body>
+    <div class="layout">
+        <header>
+            <h1>Добро пожаловать на сайт о временной линии событий Отечественной войны 1812 года!</h1>
+            <p>Здесь вы сможете ознакомиться с ключевыми событиями и фактами, которые привели к важным изменениям в истории России.</p>
+            <button id="themeToggle" class="theme-toggle-btn">
+                <i class="fas fa-sun" id="sunIcon"></i>
+                <i class="fas fa-moon" id="moonIcon"></i>
+            </button>
+        </header>
+
+        <nav>
+            <h3>Временная линия</h3>
+            <div class="timeline">
+                <div class="timeline-event" data-id="1">
+                    <div class="timeline-date">10 (22) июня 1812</div>
+                    <div class="timeline-title">Франция объявила войну России</div>
+                </div>
+                <div class="timeline-event" data-id="2">
+                    <div class="timeline-date">12 (24) июня 1812</div>
+                    <div class="timeline-title">Французская армия начала переправу через Неман</div>
+                </div>
+                <div class="timeline-event" data-id="3">
+                    <div class="timeline-date">13 (25) июня 1812</div>
+                    <div class="timeline-title">Русская армия начала запланированное отступление</div>
+                </div>
+                <div class="timeline-event" data-id="4">
+                    <div class="timeline-date">6 (18) июля 1812</div>
+                    <div class="timeline-title">Манифест Александра I о вооружении всего государства</div>
+                </div>
+                <div class="timeline-event" data-id="5">
+                    <div class="timeline-date">11 (23) июля 1812</div>
+                    <div class="timeline-title">Бой при Дашковке и Салтановке: Багратион нанес удар войскам Даву</div>
+                </div>
+                <div class="timeline-event" data-id="6">
+                    <div class="timeline-date">22 (3) августа 1812</div>
+                    <div class="timeline-title">Соединение 1-й и 2-й русских армий под Смоленском</div>
+                </div>
+                <div class="timeline-event" data-id="7">
+                    <div class="timeline-date">4-6 (16-18) августа 1812</div>
+                    <div class="timeline-title">Смоленское сражение: Русские войска оставили Смоленск</div>
+                </div>
+                <div class="timeline-event" data-id="8">
+                    <div class="timeline-date">8 (20) августа 1812</div>
+                    <div class="timeline-title">М.И. Голенищев-Кутузов назначен главнокомандующим русской армии</div>
+                </div>
+                <div class="timeline-event" data-id="9">
+                    <div class="timeline-date">17 (29) августа 1812</div>
+                    <div class="timeline-title">Кутузов прибыл в армию и принял командование</div>
+                </div>
+                <div class="timeline-event" data-id="10">
+                    <div class="timeline-date">24-26 августа (5-7 сентября) 1812</div>
+                    <div class="timeline-title">Бородинское сражение</div>
+                </div>
+                <div class="timeline-event" data-id="11">
+                    <div class="timeline-date">1 (13) сентября 1812</div>
+                    <div class="timeline-title">Совет в Филях: Решение оставить Москву</div>
+                </div>
+                <div class="timeline-event" data-id="12">
+                    <div class="timeline-date">2 (14) сентября 1812</div>
+                    <div class="timeline-title">Оставление Москвы русской армией, вступление Наполеона</div>
+                </div>
+                <div class="timeline-event" data-id="13">
+                    <div class="timeline-date">5 (17) сентября – 3 (21) октября 1812</div>
+                    <div class="timeline-title">Тарутинский марш-маневр русской армии</div>
+                </div>
+                <div class="timeline-event" data-id="14">
+                    <div class="timeline-date">16 (28) сентября 1812</div>
+                    <div class="timeline-title">Партизанский отряд Давыдова нанес поражение французам у Вязьмы</div>
+                </div>
+                <div class="timeline-event" data-id="15">
+                    <div class="timeline-date">6 (18) октября 1812</div>
+                    <div class="timeline-title">Тарутинское сражение: поражение корпуса Мюрата</div>
+                </div>
+                <div class="timeline-event" data-id="16">
+                    <div class="timeline-date">7 (19) октября 1812</div>
+                    <div class="timeline-title">Французская армия оставила Москву</div>
+                </div>
+                <div class="timeline-event" data-id="17">
+                    <div class="timeline-date">10 (22) октября 1812</div>
+                    <div class="timeline-title">Российская армия вступила в Москву</div>
+                </div>
+                <div class="timeline-event" data-id="18">
+                    <div class="timeline-date">12 (24) октября 1812</div>
+                    <div class="timeline-title">Сражение при Малоярославце</div>
+                </div>
+                <div class="timeline-event" data-id="19">
+                    <div class="timeline-date">17 (29) октября 1812</div>
+                    <div class="timeline-title">Наполеон вышел на Смоленскую дорогу</div>
+                </div>
+                <div class="timeline-event" data-id="20">
+                    <div class="timeline-date">3-6 (15-18) ноября 1812</div>
+                    <div class="timeline-title">Сражение под Красным</div>
+                </div>
+                <div class="timeline-event" data-id="21">
+                    <div class="timeline-date">14-16 (26-28) ноября 1812</div>
+                    <div class="timeline-title">Переправа французов через Березину</div>
+                </div>
+                <div class="timeline-event" data-id="22">
+                    <div class="timeline-date">23 (5) декабря 1812</div>
+                    <div class="timeline-title">Наполеон передал командование Мюрату и уехал в Париж</div>
+                </div>
+                <div class="timeline-event" data-id="23">
+                    <div class="timeline-date">14 (26) декабря 1812</div>
+                    <div class="timeline-title">Остатки армии Наполеона покинули территорию России</div>
+                </div>
+                <div class="timeline-event" data-id="24">
+                    <div class="timeline-date">21 декабря 1812 (2 января 1813)</div>
+                    <div class="timeline-title">Кутузов поздравил войска с изгнанием врага</div>
+                </div>
+                <div class="timeline-event" data-id="25">
+                    <div class="timeline-date">25 декабря 1812 (6 января 1813)</div>
+                    <div class="timeline-title">Манифест Александра I ознаменовал завершение войны</div>
+                </div>
+            </div>
+        </nav>
+
+        <main id="mainContent">
+            <p>Здесь будет отображена подробная информация об выбранном событии с временной линии.</p>
+            <button class="close-btn" id="closeBtn">Закрыть</button>
+        </main>
+
+        <article class="widget" id="widgetContent">
+            <p>Здесь будут отображены изображения, относящиеся к выбранному событию.</p>
+        </article>
+
+        <article class="statistics">
+            <div class="statistics-banner">
+                <img src="./src/images/banner.jpg" class="banner" alt="Banner Image">
+            </div>
+        </article>
+
+        <footer>
+            <div class="footer-content">
+                <h4>Создатель сайта</h4>
+                <p>Разработано: <strong>Иван Иванов</strong></p>
+                <p>&copy; 2024 Все права защищены</p>
+            </div>
+        </footer>
+    </div>
+
+    <button class="scroll-to-top" id="scrollToTopBtn">&#8679;</button>
+
+    <script src="./src/scripts/scripts.js"></script>
+</body>
+</html>
