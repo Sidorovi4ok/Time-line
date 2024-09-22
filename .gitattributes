@@ -1,2 +1,6 @@
 * linguist-vendored
 *.html linguist-vendored=false
+
+
+src/scripts/scripts.js -linguist-detectable
+src/styles/styles.css -linguist-detectable
