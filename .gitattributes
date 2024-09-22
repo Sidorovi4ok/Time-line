@@ -1,2 +1,2 @@
-# Fix syntax highlighting for devcontainer files
-.devcontainer/*.json linguist-language=JSON-with-Comments
+# Example of a `.gitattributes` file which reclassifies `.rb` files as Java:
+*.js linguist-language=JavaScript
