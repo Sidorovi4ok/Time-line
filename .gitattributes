@@ -2,5 +2,5 @@
 *.html linguist-vendored=false
 
 
-src/scripts/scripts.js -linguist-detectable
-src/styles/styles.css -linguist-detectable
+src/scripts/ -linguist-detectable
+src/styles/ -linguist-detectable
