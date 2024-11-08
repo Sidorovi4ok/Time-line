@@ -40,7 +40,7 @@
             .layout {
                 display: grid;
                 grid-template-rows: auto auto 350px auto;
-                grid-template-columns: 300px 50% auto;
+                grid-template-columns: 300px auto auto;
                 grid-template-areas: 'header header header' 'sidebar main main' 'sidebar widget statistics' 'footer footer footer';
             }
         }
@@ -98,8 +98,6 @@
         .widget img {
             max-width: 100%; /* Ограничиваем ширину изображения до ширины родительского блока */
             height: auto; /* Сохраняем пропорции изображения */
-            display: block; /* Убираем пробелы снизу изображений */
-            margin-bottom: 10px; /* Добавляем отступ между изображениями */
         }
         .statistics {
             grid-area: statistics;
