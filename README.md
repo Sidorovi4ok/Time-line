@@ -6,7 +6,6 @@
 
 <p align="center">
   <a href="http://limon4ikdk.temp.swtest.ru/"><img src="https://img.shields.io/badge/Демо-версия-green" alt="Демо-версия"></a>
-  <img src="https://img.shields.io/badge/Движок-2021.3-blueviolet" alt="Версия Unity">
   <img src="https://img.shields.io/badge/Версия-1.0.0-blue" alt="Версия игры">
   <img src="https://img.shields.io/badge/Лицензия-MIT-success" alt="Лицензия">
 </p>
