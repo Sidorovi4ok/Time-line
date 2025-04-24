@@ -1,4 +1,4 @@
-# 🎯 TimeLineWar1812
+# 🎯 TimeLine
 
 <p align="center">
   <img src="https://github.com/Sidorovi4ok/TimeLineWar1812/blob/master/Git-Hub-Logo.png" alt="Логотип проекта" width="726">
